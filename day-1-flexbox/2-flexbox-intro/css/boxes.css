@@ -1,21 +1,34 @@
 body {
-	font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
 ul {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-	border: 1px dotted red;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border: 1px dotted red;
+  display: flex;
+  /* flex-direction: row;
+  flex-wrap: nowrap; layout and wrapping
+  justify-content - how child items are presented main axis
+  align-items cross axis*/
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
 }
+
 li {
-	border: 1px solid #999;
-	margin: 0.5em;
-	padding: 0.5em;
+  border: 1px solid #999;
+  margin: 0.5em;
+  padding: 0.5em;
 }
 
-
-
-
-
-
-
+.flex2 {
+  border: 2px dashed blue;
+  /* items have default order 1 
+  do not use width property on flex items */
+  order: 2;
+  /* flex: G S B (shorthand for these 3 properties) 
+  dfault values = 0, 1, auto */
+  flex: 0 0 25%;
+}
